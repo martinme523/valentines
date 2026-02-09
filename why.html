@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Why 😢</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body data-page="why">
+
+<div class="container">
+  <div class="gif-box">
+      <img src="images/sad-wish-you-were-here.gif" alt="Cute cat gif">
+    </div>
+
+  <h4 style="margin-top:15px;">Why not? 🥺<br> please say yes</h4>
+
+  <div class="buttons">
+    <button id="yesBtn">YES 💕</button>
+    <button id="noBtn">NO 🙄</button>
+  </div>
+</div>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+  const yesBtn = document.getElementById("yesBtn");
+
+  let scale = 1;
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 250 - 125;
+    const y = Math.random() * 100 - 50;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+
+    scale += 0.1;
+    yesBtn.style.transform = `scale(${scale})`;
+  });
+
+  yesBtn.addEventListener("click", () => {
+    window.location.href = "yes.html";
+  });
+</script>
+
+</body>
+</html>
